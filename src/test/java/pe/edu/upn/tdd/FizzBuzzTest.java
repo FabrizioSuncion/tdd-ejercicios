@@ -10,4 +10,8 @@ class FizzBuzzTest {
     void convertirUnoDevuelveUnoComoTexto() {
         assertEquals("1", FizzBuzz.convertir(1));
     }
+    @Test
+    void convertirDosDevuelveDosComoTexto() {
+    	assertEquals("2", FizzBuzz.convertir(2));
+    }
 }
