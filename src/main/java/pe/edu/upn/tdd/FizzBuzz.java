@@ -3,6 +3,9 @@ package pe.edu.upn.tdd;
 public class FizzBuzz {
 
     public static String convertir(int n) {
+        if (n <= 0) {
+            throw new IllegalArgumentException("n debe ser positivo");
+        }
         if (n % 15 == 0) {
             return "FizzBuzz";
         }
