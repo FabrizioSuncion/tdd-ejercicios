@@ -15,32 +15,14 @@ public class ValidadorContrasena {
         List<String> errores = new ArrayList<>();
 
         if (clave.length() < LONGITUD_MINIMA) {
-            errores.add("Debe tener al menos 8 caracteres");
+            errores.add("Debe tener al menos " + LONGITUD_MINIMA + " caracteres");
         }
-        if (!tieneMayuscula(clave)) {
+        if (clave.chars().noneMatch(Character::isUpperCase)) {
             errores.add("Debe tener al menos una mayúscula");
         }
-        if (!tieneDigito(clave)) {
+        if (clave.chars().noneMatch(Character::isDigit)) {
             errores.add("Debe tener al menos un dígito");
         }
         return errores;
-    }
-
-    private static boolean tieneMayuscula(String clave) {
-        for (char c : clave.toCharArray()) {
-            if (Character.isUpperCase(c)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private static boolean tieneDigito(String clave) {
-        for (char c : clave.toCharArray()) {
-            if (Character.isDigit(c)) {
-                return true;
-            }
-        }
-        return false;
     }
 }
