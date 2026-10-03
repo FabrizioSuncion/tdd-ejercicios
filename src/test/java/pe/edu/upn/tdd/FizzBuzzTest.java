@@ -18,4 +18,8 @@ class FizzBuzzTest {
     void convertirTresDevuelveFizz() {
     	assertEquals("Fizz", FizzBuzz.convertir(3));
     }
+    @Test
+    void convertirCincoDevuelveBuzz() {
+    	assertEquals("Buzz", FizzBuzz.convertir(5));
+    }
 }
