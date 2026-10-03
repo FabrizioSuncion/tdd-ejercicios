@@ -14,4 +14,8 @@ class FizzBuzzTest {
     void convertirDosDevuelveDosComoTexto() {
     	assertEquals("2", FizzBuzz.convertir(2));
     }
+    @Test
+    void convertirTresDevuelveFizz() {
+    	assertEquals("Fizz", FizzBuzz.convertir(3));
+    }
 }
