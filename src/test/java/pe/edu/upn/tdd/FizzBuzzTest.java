@@ -1,8 +1,11 @@
 package pe.edu.upn.tdd;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 class FizzBuzzTest {
 
@@ -35,8 +38,16 @@ class FizzBuzzTest {
     void convertirDiezDevuelveBuzz() {
         assertEquals("Buzz", FizzBuzz.convertir(10));
     }
+
     @Test
     void convertirQuinceDevuelveFizzBuzz() {
         assertEquals("FizzBuzz", FizzBuzz.convertir(15));
+    }
+
+    @ParameterizedTest(name = "n = {0} lanza excepcion")
+    @ValueSource(ints = {0, -3})
+    void convertirCeroONegativoLanzaExcepcion(int n) {
+        assertThrows(IllegalArgumentException.class,
+            () -> FizzBuzz.convertir(n));
     }
 }
