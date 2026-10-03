@@ -10,16 +10,29 @@ class FizzBuzzTest {
     void convertirUnoDevuelveUnoComoTexto() {
         assertEquals("1", FizzBuzz.convertir(1));
     }
+
     @Test
     void convertirDosDevuelveDosComoTexto() {
-    	assertEquals("2", FizzBuzz.convertir(2));
+        assertEquals("2", FizzBuzz.convertir(2));
     }
+
     @Test
     void convertirTresDevuelveFizz() {
-    	assertEquals("Fizz", FizzBuzz.convertir(3));
+        assertEquals("Fizz", FizzBuzz.convertir(3));
     }
+
     @Test
     void convertirCincoDevuelveBuzz() {
-    	assertEquals("Buzz", FizzBuzz.convertir(5));
+        assertEquals("Buzz", FizzBuzz.convertir(5));
+    }
+
+    @Test
+    void convertirSeisDevuelveFizz() {
+        assertEquals("Fizz", FizzBuzz.convertir(6));
+    }
+
+    @Test
+    void convertirDiezDevuelveBuzz() {
+        assertEquals("Buzz", FizzBuzz.convertir(10));
     }
 }
